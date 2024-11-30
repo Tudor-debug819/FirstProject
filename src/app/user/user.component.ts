@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  @Input() name!: string;
+  @Input({required:true}) name!: string; //this instruction must be set
   onSelectUser() {
   }
 
