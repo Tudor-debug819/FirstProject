@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class UserComponent {
   @Input({required:true}) name!: string; //this instruction must be set
+  @Output() select = new EventEmitter();
   onSelectUser() {
   }
 
