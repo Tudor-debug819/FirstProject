@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class UserComponent {
   @Input({required:true}) id!: string;
   @Input({required:true}) name!: string; //this instruction must be set
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>();
   onSelectUser() {
     this.select.emit(this.id);
   }
